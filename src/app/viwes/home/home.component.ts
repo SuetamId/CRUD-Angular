@@ -3,7 +3,9 @@ import { UserService } from './../../service/user.service';
 import { User } from './../../model/user';
 
 import { Component} from '@angular/core';
-import { Observable } from 'rxjs';
+import { catchError, Observable, of } from 'rxjs';
+import { ErrorDialogComponent } from 'src/app/shared/error-dialog/error-dialog.component';
+import { MatDialog } from '@angular/material/dialog';
 
 
 
@@ -20,14 +22,32 @@ export class HomeComponent{
   displayedColumns: string[] = ['Id', 'Nome', 'Idade', 'Cpf','Actions'];
 
 
-  constructor (private userService: UserService ) {
+  constructor (
+    private userService: UserService,
+    public dialog: MatDialog
+    ) {
 
-    this.users$ = this.userService.getUsers();
+    this.users$ = this.userService.getUsers().
+    pipe(
+      catchError(error =>{
+        this.onError('Ops algo de errado aconteceu :(')
+        return of([])
+      })
+    );
+
+
   }
-
-
+  onError(errorMsg: string) {
+    this.dialog.open(ErrorDialogComponent, {
+      data: errorMsg
+    });
+  }
   ngOnInit(): void {
 
   }
 
 }
+function openDialog(errorMsg: any, string: any) {
+  throw new Error('Function not implemented.');
+}
+

@@ -20,6 +20,9 @@ import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatDialogModule} from '@angular/material/dialog';
+import { SharedModule } from './shared/shared.module';
+
 
 
 
@@ -29,6 +32,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
+
 
 
 
@@ -46,7 +50,9 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     MatCardModule,
     MatInputModule,
     MatFormFieldModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatDialogModule,
+    SharedModule
 
   ],
   providers: [],
