@@ -1,0 +1,54 @@
+<mat-card>
+  <mat-card-content>
+    <mat-toolbar>
+      <span>Usuarios</span>
+    </mat-toolbar>
+    <div class="container" *ngIf="users$ | async as users; else loading">
+
+      <table
+        class="tb-users"
+        mat-table
+        [dataSource]="users"
+        class="mat-elevation-z8"
+      >
+        <ng-container matColumnDef="Id">
+          <th mat-header-cell *matHeaderCellDef>Id</th>
+          <td mat-cell *matCellDef="let user">{{ user.id }}</td>
+        </ng-container>
+        <ng-container matColumnDef="Nome">
+          <th mat-header-cell *matHeaderCellDef>Nome</th>
+          <td mat-cell *matCellDef="let user">{{ user.nome }}</td>
+        </ng-container>
+        <ng-container matColumnDef="Idade">
+          <th mat-header-cell *matHeaderCellDef>Idade</th>
+          <td mat-cell *matCellDef="let user">{{ user.idade }}</td>
+        </ng-container>
+        <ng-container matColumnDef="Cpf">
+          <th mat-header-cell *matHeaderCellDef>Cpf</th>
+          <td mat-cell *matCellDef="let user">{{ user.cpf }}</td>
+        </ng-container>
+        <ng-container matColumnDef="Actions">
+          <th mat-header-cell *matHeaderCellDef>Actions</th>
+          <td mat-cell *matCellDef="let user">
+            <button>
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button>
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+    </div>
+
+    <ng-template #loading>
+      <div class="laoding-spinner">
+        <mat-spinner ></mat-spinner>
+      </div>
+    </ng-template>
+
+  </mat-card-content>
+</mat-card>

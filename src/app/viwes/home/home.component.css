@@ -1,0 +1,31 @@
+table {
+  width: 100%;
+}
+mat-icon{
+  color:#fff ;
+  transition: 0.5s;
+}
+mat-icon:hover{
+  color:#9c27b0 ;
+  transition: 0.5s;
+}
+
+button{
+  background-color:#424242;
+  border: none;
+  cursor: pointer;
+  }
+  mat-card{
+    background-color: #fff;
+  }
+  mat-toolbar{
+    background-color: #9c27b0;
+  }
+
+.laoding-spinner{
+  background-color: rgba(0, 0, 0, 0.25);
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "id": 3,
+    "nome": "cleverson",
+    "idade": 0,
+    "cpf": 0.0
+  },
+  {
+    "id": 4,
+    "nome": "christine",
+    "idade": 0,
+    "cpf": 0.0
+  },
+  {
+    "id": 5,
+    "nome": "AMANDA",
+    "idade": 25,
+    "cpf": 123.12
+  },
+  {
+    "id": 6,
+    "nome": "AMANDA",
+    "idade": 25,
+    "cpf": 123.12
+  },
+  {
+    "id": 7,
+    "nome": "leo",
+    "idade": 25,
+    "cpf": 1223.12222
+  },
+  {
+    "id": 2,
+    "nome": "beatriz atualizada",
+    "idade": 17,
+    "cpf": 0.22
+  },
+  {
+    "id": 8,
+    "nome": "beatriz atualizada",
+    "idade": 17,
+    "cpf": 0.22
+  },
+  {
+    "id": 9,
+    "nome": "leo",
+    "idade": 25,
+    "cpf": 1223.12222
+  },
+  {
+    "id": 10,
+    "nome": "leo",
+    "idade": 25,
+    "cpf": 1223.12222
+  },
+  {
+    "id": 11,
+    "nome": "leo",
+    "idade": 25,
+    "cpf": 1223.12222
+  },
+  {
+    "id": 12,
+    "nome": "leo",
+    "idade": 25,
+    "cpf": 1223.12222
+  }
+]
